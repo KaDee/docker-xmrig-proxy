@@ -22,6 +22,12 @@ If you want to know all the possible options, run:
 docker run --rm -it kadeeke/xmrig-proxy
 ```
 
+You could also use a config file:
+
+```bash
+docker run --rm -it -d -p <PUBLIC_PORT>:3333 --name xmrig-proxy -v ./config.json:/usr/local/bin/config.json kadeeke/xmrig-proxy
+```
+
 ## Building
 
 The [Dockerfile](https://github.com/kadeeke/xmrig-proxy-docker/blob/master/Dockerfile) uses [multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/) for building the `xmrig-proxy` app.
